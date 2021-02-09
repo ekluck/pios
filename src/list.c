@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
@@ -32,4 +31,3 @@ void list_remove(struct list_element* head, int data){
 		head_pointer = head_pointer->next;
 	}
 }
-
