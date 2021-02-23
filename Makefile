@@ -15,6 +15,7 @@ OBJS = \
 	boot.o \
 	kernel_main.o \
 	list.o \
+	led.o \
 
 
 

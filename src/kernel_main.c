@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "list.h"
-
+#include "led.h"
 
 void bss_to_zero();
 
@@ -16,12 +16,26 @@ struct list_element *head = &a;
 
 struct list_element* list = &a;
 
+//new method
+/*unsigned long get_timer_count () {
+	unsigned long * timer_count_register = 0x3f003004 ;
+	return * timer_count_register ;
+}*/
+
+
 void kernel_main(){
+	
 	bss_to_zero();
 	list_add(list, &b);
 	list_add(list, &c);
 	list_remove(head, 1);
+	get_timer_count();
+	
 	while (1){
+		led_on();
+		delay();
+		led_off();
+		delay();
 	}
 }
 
