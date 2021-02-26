@@ -16,7 +16,8 @@ OBJS = \
 	kernel_main.o \
 	list.o \
 	led.o \
-
+	serial.o \
+	rprintf.o \
 
 
 OBJ = $(patsubst %,$(ODIR)/%,$(OBJS))
